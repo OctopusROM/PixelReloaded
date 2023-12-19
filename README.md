@@ -1,11 +1,11 @@
-# Pixel Experience #
+# PixelReloaded #
 
 ### Sync ###
 
 ```bash
 
 # Initialize local repository
-repo init -u https://github.com/PixelExperience/manifest -b thirteen
+repo init -u https://github.com/OctopusROM/PixelReloaded -b thirteen
 
 # Sync
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
@@ -19,7 +19,7 @@ repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 $ . build/envsetup.sh
 
 # Choose a target
-$ lunch aosp_$device-userdebug
+$ lunch aosp_$device-user
 
 # Build the code
 $ mka bacon -jX
