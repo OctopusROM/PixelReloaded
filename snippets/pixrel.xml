@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="octopus"
+          fetch="https://github.com/OctopusROM"
+          revision="thirteen-plus" />
+
+  <project path="manifest" name="PixelReloaded" remote="octopus" />
+  <project path="build/make" name="PixelReloaded-build" remote="octopus" revision="thirteen">
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="vendor/aosp" name="PixelReloaded-vendor_aosp" remote="octopus" />
+  <project path="packages/apps/Updates" name="PixelReloaded-packages_apps_Updates" remote="octopus" revision="thirteen" />
+</manifest>
